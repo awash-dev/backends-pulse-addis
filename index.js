@@ -87,6 +87,7 @@ const MessageRouter = require("./routes/messageRoutes");
 const ConversationRoute = require("./routes/conversationRoutes");
 const PackageRoute = require("./routes/packageRouter");
 const ChatRoutes = require("./routes/chatroutes");
+const HealthAdviceRouter = require("./routes/healthAdvice");
 
 // 6. Healthy Check / Root Route (Explicit Content-Type for cPanel Recognition)
 app.get("/", (req, res) => {
@@ -124,6 +125,7 @@ app.use("/api/conversation", ConversationRoute);
 app.use("/api/package", PackageRoute);
 app.use("/api/chat", ChatRoutes);
 app.use("/api/message", MessageRouter);
+app.use("/api/health-advice", HealthAdviceRouter);
 
 // 8. Serve Static Files / React Build
 const buildPath = path.join(__dirname, "build");
