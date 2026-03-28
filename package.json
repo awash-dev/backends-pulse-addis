@@ -1,19 +1,11 @@
 {
   "name": "server",
   "version": "1.0.0",
-<<<<<<< HEAD
-  "main": "server.js",
-  "license": "MIT",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
-=======
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
->>>>>>> ec22384 (Initialize backend repository)
   },
   "dependencies": {
     "axios": "^1.7.2",
