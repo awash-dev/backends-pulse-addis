@@ -10,8 +10,8 @@ const path = require("path");
 const fs = require("fs");
 const morgan = require("morgan");
 
-// 1. Load Environment Variables
-dotenv.config();
+// 1. Load Environment Variables (Using Absolute Path for cPanel Compatibility)
+dotenv.config({ path: path.join(__dirname, ".env") });
 const PORT = process.env.PORT || 4000;
 
 // 2. CORS Configuration
@@ -87,9 +87,10 @@ const ConversationRoute = require("./routes/conversationRoutes");
 const PackageRoute = require("./routes/packageRouter");
 const ChatRoutes = require("./routes/chatroutes");
 
-// 6. Healthy Check / Root Route
+// 6. Healthy Check / Root Route (Explicit Content-Type for cPanel Recognition)
 app.get("/", (req, res) => {
-  res.send("👀 Server is alive! Welcome to RiseTech API.");
+  res.setHeader("Content-Type", "text/html; charset=utf-8");
+  res.status(200).send("👀 Server is alive! Welcome to RiseTech API.");
 });
 
 // 7. API Routes
