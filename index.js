@@ -23,6 +23,7 @@ const allowedOrigins = [
   "https://stock.kefaycard.com",
   "https://client.greenafricafarm.com",
   "https://admin.greenafricafarm.com",
+  "https://pulseback.greenafricafarm.com",
 ];
 
 app.use(
