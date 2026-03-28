@@ -105,8 +105,6 @@ var orderSchema = new mongoose.Schema(
       ref: "User", // Reference to User model (for delivery boys)
       default: null,
     },
-<<<<<<< HEAD
-=======
     prescriptionStatus: {
       type: String,
       enum: ["not_required", "pending", "approved", "rejected"],
@@ -118,7 +116,6 @@ var orderSchema = new mongoose.Schema(
         secure_url: { type: String, required: true },
       },
     ],
->>>>>>> ec22384 (Initialize backend repository)
   },
   {
     timestamps: true,

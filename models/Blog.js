@@ -50,13 +50,10 @@ var blogSchema = new mongoose.Schema(
             type: String,
             default: "Admin",
         },
-<<<<<<< HEAD
-=======
         path: {
             type: String,
             default: "/shop",
         },
->>>>>>> ec22384 (Initialize backend repository)
         images: [],
     },
     {

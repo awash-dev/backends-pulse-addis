@@ -56,12 +56,9 @@ router.get("/getyearlyorders", getYearlyTotalOrder);
 router.put('/changepassword/:token', changePassword);
 router.get("/userList", getUsersByRole);
 router.get("/userCounts", getUserCount);
-<<<<<<< HEAD
-=======
 router.get("/delivery-boys", authMiddleware, getDeliveryBoys);
 router.put("/delivery-boys/:id", authMiddleware, isAdmin, updatedUser);
 router.delete("/delivery-boys/:id", authMiddleware, isAdmin, deleteaUser);
->>>>>>> ec22384 (Initialize backend repository)
 router.get("/:id", getaUser);
 router.put("/:id", updatedUser);
 

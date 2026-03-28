@@ -81,8 +81,6 @@ var productSchema = new mongoose.Schema(
         ],
       },
     ],
-<<<<<<< HEAD
-=======
     // ── Pharmacy-specific fields ──
     strength: {
       type: String,
@@ -101,7 +99,6 @@ var productSchema = new mongoose.Schema(
         description: { type: String },
       },
     ],
->>>>>>> ec22384 (Initialize backend repository)
     tags: [String],
     ratings: [
       {

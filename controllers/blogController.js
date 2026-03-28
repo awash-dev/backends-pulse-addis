@@ -23,20 +23,12 @@ const createBlog = asyncHandler(async (req, res) => {
             action: "create Blog",
             resource: "Blog",
             resourceId: newBlog?._id,
-<<<<<<< HEAD
-            user: newBlog.author,
-=======
             user: req.user?._id || req.body?.PostedByuserId,
->>>>>>> ec22384 (Initialize backend repository)
             details: { newBlog },
         });
         res.json(newBlog);
     } catch (error) {
-<<<<<<< HEAD
-        throw new Error(error);
-=======
         res.status(400).json({ message: error.message });
->>>>>>> ec22384 (Initialize backend repository)
     }
 });
 

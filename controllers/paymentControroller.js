@@ -9,12 +9,8 @@ const initializePayment = async (req, res) => {
     const {
         totalPrice, currency, email, first_name, tx_ref,
         last_name, phone_number, address, country, city,
-<<<<<<< HEAD
-        postalCode, totalPriceAfterDiscount, cart
-=======
         postalCode, totalPriceAfterDiscount, cart,
         prescriptionImages, prescriptionStatus
->>>>>>> ec22384 (Initialize backend repository)
     } = req.body;
 
     const userId = req.user._id;
@@ -25,13 +21,8 @@ const initializePayment = async (req, res) => {
             amount: totalPrice,
             currency: "ETB",
             tx_ref: tx_ref,
-<<<<<<< HEAD
-            callback_url: "http://localhost:4000/api/payment/verify", // or your deployed URL
-            return_url: "http://localhost:3000/payment/success", // your frontend URL
-=======
             callback_url: process.env.CHAPA_CALLBACK_URL,
             return_url: process.env.CHAPA_RETURN_URL,
->>>>>>> ec22384 (Initialize backend repository)
             first_name: first_name,
             last_name: last_name,
             email: email,
@@ -60,11 +51,8 @@ const initializePayment = async (req, res) => {
                 country,
                 totalPrice,
                 totalPriceAfterDiscount,
-<<<<<<< HEAD
-=======
                 prescriptionImages: prescriptionImages || [],
                 prescriptionStatus: prescriptionStatus || "not_required",
->>>>>>> ec22384 (Initialize backend repository)
                 status: "pending"
             });
 

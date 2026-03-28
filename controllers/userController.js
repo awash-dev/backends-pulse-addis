@@ -787,11 +787,8 @@ const createOrder = asyncHandler(async (req, res) => {
     totalPriceAfterDiscount,
     return_url,
     cart,
-<<<<<<< HEAD
-=======
     prescriptionImages,
     prescriptionStatus,
->>>>>>> ec22384 (Initialize backend repository)
   } = req.body;
 
   if (!first_name || !last_name || !phone_number || !country) {
@@ -821,11 +818,8 @@ const createOrder = asyncHandler(async (req, res) => {
       country,
       totalPrice,
       totalPriceAfterDiscount,
-<<<<<<< HEAD
-=======
       prescriptionImages: prescriptionImages || [],
       prescriptionStatus: prescriptionStatus || "not_required",
->>>>>>> ec22384 (Initialize backend repository)
     });
 
     const savedOrder = await newOrder.save();
@@ -885,11 +879,7 @@ const getsingleOrder = asyncHandler(async (req, res) => {
 });
 
 const updateOrder = async (req, res) => {
-<<<<<<< HEAD
-  const { deliveryBoyId, status } = req.body; // Extract deliveryBoyId and status
-=======
   const { deliveryBoyId, status, prescriptionStatus } = req.body; // Extract deliveryBoyId, status, prescriptionStatus
->>>>>>> ec22384 (Initialize backend repository)
 
   try {
       // Log the incoming request body
@@ -919,15 +909,12 @@ const updateOrder = async (req, res) => {
           order.orderStatus = status; // Update order status
       }
 
-<<<<<<< HEAD
-=======
       // Update the prescription status if provided
       if (prescriptionStatus) {
           console.log('Updating Prescription Status:', prescriptionStatus);
           order.prescriptionStatus = prescriptionStatus;
       }
 
->>>>>>> ec22384 (Initialize backend repository)
       // Save the updated order
       const updatedOrder = await order.save();
       console.log('After Update:', updatedOrder); // Log order after update
