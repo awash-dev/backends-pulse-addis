@@ -1,0 +1,22 @@
+node_modules
+<<<<<<< HEAD
+
+
+=======
+.env
+>>>>>>> ec22384 (Initialize backend repository)
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+<<<<<<< HEAD
+=======
+backend.zip
+uploads/
+upload/
+>>>>>>> ec22384 (Initialize backend repository)
